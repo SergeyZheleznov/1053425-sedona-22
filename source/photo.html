@@ -23,12 +23,12 @@
           <div class="main-nav__wrapper">
             <button class="main-nav__button main-nav__button--switch" type="button"><span class="visually-hidden">Кнопка меню</span></button>
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item ">
+              <li class="site-list__item">
                 <a href="index.html">Главная</a>
               </li>
-              <li class="site-list__item site-list__item site-list__item--active"><a href="photo.html">Фото и видео</a></li>
-              <li class="site-list__item site-list__item"><a href="form.html">Форма отзыва</a></li>
-              <li class="site-list__item site-list__item">
+              <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
+              <li class="site-list__item site-list__item--active"><a href="form.html">Форма отзыва</a></li>
+              <li class="site-list__item">
                 <a href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
               </li>
               <li class="site-list__item">
@@ -61,18 +61,18 @@
             <p class="photos-head__text">Не можете решиться на пушетествие из-за&nbsp;курса? Фотографии&nbsp;помогут вам забыть о политике и экономике. </p>
           </div>
 
-            <ul>
+            <ul class="photos-list">
               <li class="photos-item">
-                <div class="photos-item__a-wrapsunset">
-                  <a class="photos-item__position">
+                <div class="photos-item__a-wrap photos-item__wrap-other">
+                  <a class="photos-item__position photos-item__position-other">
                     <picture>
                       <source media="(min-width:1200px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
                       <source media="(min-width:768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg 2x">
-                      <img class="photos-item__picture-sunset" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография степи">
+                      <img class="photos-item__picture" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография степи">
                     </picture>
                   </a>
                 </div>
-                <div class="photos-item__div-wrapsunset">
+                <div class="photos-item__div-wrap">
                   <div class="photos-item__text-wrap">
                     <b class="photos-item__title">Неродные просторы</b>
                     <p class="photos-item__author">Автор фото: Борис</p>
@@ -124,8 +124,10 @@
                             </g>
                           </g>
                         </svg>
-                        <span class="photos-item__numbers">143</span>
                       </button>
+                    </div>
+                    <div class="photos-item__numbers-wrap">
+                      <span class="photos-item__numbers">143</span>
                     </div>
                   </div>
                 </div>

@@ -24,12 +24,12 @@
           <div class="main-nav__wrapper">
             <button class="main-nav__button main-nav__button--switch" type="button"><span class="visually-hidden">Кнопка меню</span></button>
             <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item ">
+              <li class="site-list__item">
                 <a href="index.html">Главная</a>
               </li>
-              <li class="site-list__item site-list__item"><a href="photo.html">Фото и видео</a></li>
-              <li class="site-list__item site-list__item site-list__item--active"><a href="form.html">Форма отзыва</a></li>
-              <li class="site-list__item site-list__item">
+              <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
+              <li class="site-list__item site-list__item--active"><a href="form.html">Форма отзыва</a></li>
+              <li class="site-list__item">
                 <a href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
               </li>
               <li class="site-list__item">
@@ -65,90 +65,90 @@
 
           <form class="form-content" action="https://echo.htmlacademy.ru" method="POST">
 
-            <fieldset class="form-content-fildset">
+            <fieldset class="form-content__fildset">
               <legend class="form-content__legend">Представьтесь:</legend>
               <div class="form-content__wrap-wrap">
-                <div class="form-content__name">
-                  <label class="form-content__name-letter" for="form-content-name-id">Имя<sup>*</sup>:</label>
-                  <input class="form-content__name-holder" type="text" name="form-content-name" id="form-content-name-id" placeholder="Петр" required="">
+                <div class="form-content__input-text-wrap">
+                  <label class="form-content__input-text-label" for="form-content-name-id">Имя<sup>*</sup>:</label>
+                  <input class="form-content__input-text" type="text" name="form-content-name" id="form-content-name-id" placeholder="Петр" required="">
                 </div>
-                <div class="form-content__surname">
-                  <label class="form-content__surname-letter" for="form-content-surname-id">Фамилия<sup>*</sup>:</label>
-                  <input class="form-content__surname-holder" type="text" name="form-content-surname" id="form-content-surname-id" placeholder="Иванов" required="">
+                <div class="form-content__input-text-wrap">
+                  <label class="form-content__input-text-label" for="form-content-surname-id">Фамилия<sup>*</sup>:</label>
+                  <input class="form-content__input-text" type="text" name="form-content-surname" id="form-content-surname-id" placeholder="Иванов" required="">
                 </div>
-                <div class="form-content__patronymic">
-                  <label class="form-content__patronymic-letter" for="form-content-patronymic-id">Отчество:</label>
-                  <input class="form-content__patronymic-holder" type="text" name="form-content-patronymic" id="form-content-patronymic-id" placeholder="Александрович">
+                <div class="form-content__input-text-wrap">
+                  <label class="form-content__input-text-label" for="form-content-patronymic-id">Отчество:</label>
+                  <input class="form-content__input-text" type="text" name="form-content-patronymic" id="form-content-patronymic-id" placeholder="Александрович">
                 </div>
               </div>
             </fieldset>
 
-            <fieldset class="form-content">
+            <fieldset class="form-content__fildset">
               <legend class="form-content__legend">Контактная информация:</legend>
               <div class="form-content__wrap-wrap form-content__wrap-wrap--borders">
-                <div class="form-content__tel">
-                  <label class="form-content__tel-text form-content__tel-text--tube" for="telephone"><span class="form-content__tel1">Контактный</span><span class="form-content__tel2"> телефон<sup>*</sup>:</span></label>
-                  <input class="form-content__tel-input" type="tel" name="tel" id="telephone" value="Введите телефон" required="">
+                <div class="form-content__input-tel-wrap">
+                  <label class="form-content__input-tel-label form-content__input-tel-label--phone" for="telephone"><span class="form-content__tel1">Контактный</span><span class="form-content__tel2"> телефон<sup>*</sup>:</span></label>
+                  <input class="form-content__input-tel" type="tel" name="tel" id="telephone" value="Введите телефон" required="">
                 </div>
-                <div class="form-content__email">
-                  <label class="form-content__email-text form-content__email-text--envelope" for="e-mail">Электронная почта<sup>*</sup>:</label>
-                  <input class="form-content__email-input" type="email" name="email" id="e-mail" value="Введите e-mail" required="">
+                <div class="form-content__input-email-wrap">
+                  <label class="form-content__input-email-label form-content__input-email-label--envelope" for="e-mail">Электронная почта<sup>*</sup>:</label>
+                  <input class="form-content__input-email" type="email" name="email" id="e-mail" value="Введите e-mail" required="">
                 </div>
               </div>
             </fieldset>
 
-            <fieldset class="form-content">
+            <fieldset class="form-content__fildset">
               <legend class="form-content__legend">Ваше общее впечатление:</legend>
               <div class="form-content__wrap-wrap form-content__wrap-wrap--borders">
-                <div class="form-content__wrap">
-                  <input class="form-content__input visually-hidden" type="radio" name="opinion" value="plus" id="form-one" checked="">
-                  <label class="form-content__label form-content__label--circle" for="form-one">Скорее положительное</label>
+                <div class="form-content__input-radio-wrap">
+                  <input class="form-content__input-radio visually-hidden" type="radio" name="opinion" value="plus" id="form-one" checked="">
+                  <label class="form-content__input-radio-label form-content__input-radio-label--circle" for="form-one">Скорее положительное</label>
                 </div>
-                <div class="form-content__wrap">
-                  <input class="form-content__input visually-hidden" type="radio" name="opinion" value="minus" id="form-two">
-                  <label class="form-content__label form-content__label--circle" for="form-two">Скорее отрицательное</label>
+                <div class="form-content__input-radio-wrap">
+                  <input class="form-content__input-radio visually-hidden" type="radio" name="opinion" value="minus" id="form-two">
+                  <label class="form-content__input-radio-label form-content__input-radio-label--circle" for="form-two">Скорее отрицательное</label>
                 </div>
-                <div class="form-content__wrap">
-                  <input class="form-content__input visually-hidden" type="radio" name="opinion" value="so-so" id="form-three">
-                  <label class="form-content__label form-content__label--circle" for="form-three">Затрудняюсь ответить</label>
+                <div class="form-content__input-radio-wrap">
+                  <input class="form-content__input-radio visually-hidden" type="radio" name="opinion" value="so-so" id="form-three">
+                  <label class="form-content__input-radio-label form-content__input-radio-label--circle" for="form-three">Затрудняюсь ответить</label>
                 </div>
               </div>
             </fieldset>
 
-            <fieldset class="form-content">
+            <fieldset class="form-content__fildset">
               <legend class="form-content__legend">Посещенные<br> достопримечательности:</legend>
               <div class="form-content__wrap-wrap form-content__wrap-wrap--borders">
-                <div class="form-content__wrap">
-                  <input class="form-content__input visually-hidden" type="checkbox" name="check-one" id="one" checked="">
-                  <label class="form-content__label form-content__label--quadrate form-content__label1 form-content__label1--quadrate1" for="one">Мост Дьявола</label>
+                <div class="form-content__input-checkbox-wrap">
+                  <input class="form-content__input-checkbox visually-hidden" type="checkbox" name="check-one" id="one" checked="">
+                  <label class="form-content__input-checkbox-label form-content__input-checkbox-label--quadrate" for="one">Мост Дьявола</label>
                 </div>
-                <div class="form-content__wrap">
-                  <input class="form-content__input visually-hidden" type="checkbox" name="check-two" id="two" checked="">
-                  <label class="form-content__label form-content__label--quadrate form-content__label2 form-content__label2--quadrate2" for="two">Гора-Колокол</label>
+                <div class="form-content__input-checkbox-wrap">
+                  <input class="form-content__input-checkbox visually-hidden" type="checkbox" name="check-two" id="two" checked="">
+                  <label class="form-content__input-checkbox-label form-content__input-checkbox-label--quadrate" for="two">Гора-Колокол</label>
                 </div>
-                <div class="form-content__wrap">
-                  <input class="form-content__input visually-hidden" type="checkbox" name="check-three" id="three" checked="">
-                  <label class="form-content__label form-content__label--quadrate form-content__label3 form-content__label3--quadrate3" for="three">Слайд-парк</label>
+                <div class="form-content__input-checkbox-wrap">
+                  <input class="form-content__input-checkbox visually-hidden" type="checkbox" name="check-three" id="three" checked="">
+                  <label class="form-content__input-checkbox-label form-content__input-checkbox-label--quadrate" for="three">Слайд-парк</label>
                 </div>
-                <div class="form-content__wrap4">
-                  <input class="form-content__input visually-hidden" type="checkbox" name="chech-four" id="four">
-                  <label class="form-content__label form-content__label--quadrate form-content__label4 form-content__label4--quadrate4" for="four">Красные скалы</label>
+                <div class="form-content__input-checkbox-wrap">
+                  <input class="form-content__input-checkbox visually-hidden" type="checkbox" name="chech-four" id="four">
+                  <label class="form-content__input-checkbox-label form-content__input-checkbox-label--quadrate" for="four">Красные скалы</label>
                 </div>
               </div>
             </fieldset>
 
-            <fieldset class="form-content">
+            <fieldset class="form-content__fildset">
               <legend class="form-content__legend">Опишите свои эмоции:</legend>
               <div class="form-content__wrap-wrap form-content__wrap-wrap--borders">
-                <div class="form-content__text form-content__text--quadrate">
-                  <textarea class="form-content__comment" name="comment" id="comment-field" rows="5" cols="20" placeholder="Опишите подробно все свои восторги"></textarea>
-                  <label class="form-content__label" for="comment-field"><span class="visually-hidden">Описание эмоций</span></label>
+                <div class="form-content__textarea-wrap form-content__textarea-wrap--quadrate">
+                  <textarea class="form-content__input-textarea" name="comment" id="comment-field" rows="5" cols="20" placeholder="Опишите подробно все свои восторги"></textarea>
+                  <label class="form-content__input-textarea-label" for="comment-field"><span class="visually-hidden">Описание эмоций</span></label>
                 </div>
               </div>
             </fieldset>
 
             <div class="send-toggle">
-              <button class="button-form type='button">Отправить отзыв</button>
+              <button class="button-form" type="submit">Отправить отзыв</button>
             </div>
           </form>
 
