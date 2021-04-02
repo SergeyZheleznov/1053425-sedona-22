@@ -1,0 +1,242 @@
+.places {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  width: 320px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: @black;
+  background-color: @grey;
+}
+
+.places__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  width: 280px;
+  margin: 0;
+  padding: 26px 12px 29px;
+  text-align: center;
+  border-bottom: 0.5px solid @middle-grey;
+}
+
+.places__wrap-town {
+  width: 320px;
+  padding: 60px 12px 29px;
+  min-height: 211px;
+  color: @white;
+  background-color: @blue;
+}
+
+
+.places__wrap-bridge {
+  width: 320px;
+  padding: 26px 12px 29px;
+  min-height: 191px;
+  color: @white;
+  background-color: @blue;
+}
+
+.places__title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: @medium-font;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.places__number {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: @little-font;
+  font-weight: 400;
+  line-height: 21px;
+  color: @middle-brown;
+}
+
+.places__number-white {
+  color: @white;
+}
+
+.places__text {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: @little-font;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.places__tour {
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .places {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 46px 48px 39px;
+    width: 255.3px;
+    height: 256px;
+    border: none;
+  }
+
+  .places__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    width: 159px;
+    min-width: 157px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .places__wrap-town {
+    width: 256px;
+    padding: 60px 12px 29px;
+    min-height: 256px;
+    color: @white;
+    background-color: @blue;
+  }
+
+  .places__wrap-bridge {
+    width: 256px;
+    padding: 26px 12px 29px;
+    min-height: 256px;
+    z-index: 2;
+    color: @white;
+    background-color: @blue;
+  }
+
+  .places__picture-wrap {
+    z-index: 1;
+  }
+
+  .places__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: @large-font;
+  }
+
+  .places__number {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 21px;
+  }
+
+  .places__text {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .places__picture {
+    width: 512px;
+    height: 256px;
+  }
+
+  .places__shortrecomendation {
+    width: 134px;
+    margin: 0;
+    padding: 0;
+    font-size: @little-font;
+    font-weight: 400;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .places {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    justify-content: start;
+    align-items: center;
+    width: 399.9px;
+    padding-left: 43px;
+    padding-top: 44px;
+  }
+
+  .places__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    width: 310px;
+    min-width: 150px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .places__wrap-town {
+    width: 400px;
+    padding: 60px 12px 29px;
+    min-height: 256px;
+    color: @white;
+    background-color: @blue;
+  }
+
+  .places__wrap-bridge {
+    width: 399px;
+    padding: 26px 12px 29px;
+    min-height: 256px;
+    z-index: 2;
+    color: @white;
+    background-color: @blue;
+  }
+
+  .places__picture {
+    width: 800px;
+    height: 256px;
+    z-index: 1;
+  }
+
+  .places__title {
+    width: 150px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .places__number {
+    margin-bottom: 21px;
+  }
+
+  .places__recomendation {
+    width: 310px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .places__shortrecomendation {
+    width: 262px;
+  }
+}

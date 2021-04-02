@@ -1,0 +1,21 @@
+.container {
+  width: 320px;
+  margin: 0 auto;
+  background-color: @white;
+  border: @light-black;
+  border-bottom: 0.5px solid @middle-black;
+  box-shadow: 0 0 5px @middle-blue;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
