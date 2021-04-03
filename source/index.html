@@ -7,17 +7,17 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body class="body">
+  <body>
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
 
     <div class="container">
 
-      <header class="page-header">
+      <header>
 
         <nav class="main-nav"> <!-- модификатор site-list--switch обеспечивает закрытие и открытие меню
                                     main-nav__button--switch отвечает за состояние кнопки-->
@@ -25,15 +25,15 @@
           <div class="main-nav__wrapper">
             <button class="main-nav__button main-nav__button--switch" type="button"><span class="visually-hidden">Кнопка меню</span></button>
             <ul class="main-nav__list site-list">
-              <li class="site-list__item">
+              <li class="site-list__item site-list__item--active">
                 <a href="index.html">Главная</a>
               </li>
               <li class="site-list__item"><a href="photo.html">Фото и видео</a></li>
-              <li class="site-list__item site-list__item--active"><a href="form.html">Форма отзыва</a></li>
-              <li class="site-list__item">
+              <li class="site-list__item site-list__item-form"><a href="form.html">Форма отзыва</a></li>
+              <li class="site-list__item site-list__item-academy">
                 <a href="https://htmlacademy.ru/intensive/adaptive">HTML ACADEMY</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item site-list__item-down">
                 <a href="index.html">
                   <picture>
                     <source media="(min-width:1200px)" srcset="img/logo-sedona-desktop.svg">
@@ -45,39 +45,38 @@
             </ul>
           </div>
         </nav>
-
-        <div class="page-header__logo page-header__logo--sedona">
-          <img class="page-header__picture" src="img/text-sedona-index.svg" width="281" height="214" alt="sedona">
-        </div>
-
       </header>
 
-      <main class="page-main">
+      <main>
 
         <h1 class="visually-hidden"> Сайт туристического агенства «Седона»</h1>
         <section class="reasons">
 
           <div class="reasons__header">
+            <div class="reasons__header-wrap reasons__header-wrap--sedona">
+              <img class="reasons__header-picture" src="img/text-sedona-index.svg" width="281" height="214" alt="sedona">
+            </div>
             <p class="reasons__header-title">Седона – небольшой городок в Аризоне, заслуживающий&nbsp;большего!</p>
             <p class="reasons__header-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </div>
 
           <ol class="reasons-list">
-            <li class="realtown">
-              <div class="realtown__position">
-                <div class="realtown__wrap realtown__wrap--triangle">
-                  <h3 class="realtown__title">Настоящий городок</h3>
-                  <span class="realtown__number">– №1 –</span>
-                  <p class="realtown__text">Седона не аттрацион для&nbsp;туристов, там течёт&nbsp;своя&nbsp;жизнь</p>
-                </div>
-                <span class="realtown__picture">
-                  <picture>
-                    <source media="(min-width:1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
-                    <source media="(min-width:768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
-                    <img class="realtown__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="фотография городка «Седона»">
-                  </picture>
-                </span>
-                <ul class="advantages">
+            <li class="places town">
+
+              <div class="places__wrap places__wrap-town">
+                <h3 class="places__title">Настоящий городок</h3>
+                <span class="places__number places__number-white">– №1 –</span>
+                <p class="places__text">Седона не аттрацион для&nbsp;туристов, там течёт&nbsp;своя&nbsp;жизнь</p>
+              </div>
+
+              <span class="places__picture-wrap">
+                <picture>
+                  <source media="(min-width:1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg 2x">
+                  <img class="places__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="фотография городка «Седона»">
+                </picture>
+              </span>
+              <ul class="advantages">
                   <li class="advantages__item advantages__item--picture">
                     <b class="advantages__title">Жильe</b>
                     <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все&nbsp;как&nbsp;в кино!</p>
@@ -90,47 +89,46 @@
                     <b class="advantages__title">Еда</b>
                     <p class="advantages__description">Всегда заказывайте фирменный&nbsp;бургер, вы&nbsp;не разочаруетесь!</p>
                   </li>
-                </ul>
-              </div>
+              </ul>
             </li>
 
-            <li class="place">
+            <li class="places bridge">
 
-              <div class="place__wrap">
-                <h3 class="place__title">Там&nbsp;есть мост&nbsp;дьявола</h3>
+              <div class="places__wrap places__wrap-bridge">
+                <h3 class="places__title">Там&nbsp;есть мост&nbsp;дьявола</h3>
 
-                <span class="place__number">– №2 –</span>
-                <p class="place__text">Да, по нему можно пройти! Если вы <br>осмелитесь,&nbsp;конечно</p>
+                <span class="places__number places__number-white">– №2 –</span>
+                <p class="places__text">Да, по нему можно пройти! Если вы <br>осмелитесь,&nbsp;конечно</p>
               </div>
-              <span class="place__picture-wrap">
+              <span class="places__picture-wrap">
                 <picture>
                   <source media="(min-width:1200px)" srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg 2x">
-                  <img class="place__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фотография моста">
+                  <img class="places__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фотография моста">
                 </picture>
               </span>
             </li>
-            <li class="place">
-              <div class="place__wrap">
-                <h3 class="place__title">Небольшая площадь</h3>
-                <span class="place__number">– №3 –</span>
-                <p class="place__text">Все интересные места находятся очень близко</p>
+            <li class="places">
+              <div class="places__wrap">
+                <h3 class="places__title">Небольшая площадь</h3>
+                <span class="places__number">– №3 –</span>
+                <p class="places__text">Все интересные места находятся очень близко</p>
               </div>
             </li>
 
-            <li class="place">
-              <div class="place__wrap">
-                <h3 class="place__title">Красивая дорога</h3>
-                <span class="place__number">– №4 –</span>
-                <p class="place__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="places">
+              <div class="places__wrap">
+                <h3 class="places__title">Красивая дорога</h3>
+                <span class="places__number">– №4 –</span>
+                <p class="places__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
 
-            <li class="place">
-              <div class="place__wrap">
-                <h3 class="place__title">Мало туристов</h3>
-                <span class="place__number">– №5 –</span>
-                <p class="place__text">Большинство едет в Гранд Каньон и толпится там</p>
+            <li class="places">
+              <div class="places__wrap">
+                <h3 class="places__title">Мало туристов</h3>
+                <span class="places__number">– №5 –</span>
+                <p class="places__text">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
           </ol>

@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  margin: auto;
+  width: 280px;
+  height: 58px;
+
+  font-size: @large-font;
+  font-weight: 700;
+  line-height: 58px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @blue;
+  border: none;
+}
+
+.button:hover {
+  background-color: @dark-blue;
+}
+
+.button:focus {
+  background-color: @very-dark-blue;
+  color: @light-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 458px;
+    height: 58px;
+    font-size: @large-font;
+  }
+
+  .button__form {
+    width: 324px;
+    height: 58px;
+    margin-bottom: 50px;
+  }
+}
