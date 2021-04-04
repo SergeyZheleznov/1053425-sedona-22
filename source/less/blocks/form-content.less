@@ -1,0 +1,42 @@
+.form-comtent::after {
+  content: "";
+  position: absolute;
+  top: 590px;
+  width: 320px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-image: url("../img/bg-triangle.svg");
+}
+
+
+@media (min-width: @tablet-width) {
+  .form-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .customer {
+    order: 2;
+  }
+
+  .contacts {
+    order: 3;
+  }
+
+  .radio {
+    order: 1;
+  }
+
+  .checkbox {
+    order: 4;
+  }
+
+  .discription {
+    order: 5;
+  }
+
+  .send-toggle {
+    order: 6;
+  }
+}
