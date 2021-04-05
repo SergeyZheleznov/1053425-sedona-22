@@ -49,7 +49,7 @@
   font-weight: 700px;
   line-height: 26px;
   text-align: left;
-  color: #000000;
+  color: @black;
 }
 
 .checkbox__label--quadrate::before {
@@ -127,6 +127,7 @@
 
 @media (min-width: @tablet-width) {
   .checkbox {
+    order: 4;
     margin-top: 47px;
   }
 
@@ -220,7 +221,7 @@
     left: 800px;
     width: 274px;
     height: 1px;
-    background-color: rgba(1, 1, 1, 0.1);
+    background-color: @light-black;
   }
 
   .checkbox__wrap-wrap {

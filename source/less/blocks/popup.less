@@ -1,8 +1,8 @@
-.module1 {
-  display: none;
+.popup {
+  display: block;
   position: relative;
   z-index: 2;
-  top: -700px;
+  top: 100px;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
@@ -12,12 +12,20 @@
   margin-right: auto;
   padding: 40px 53px 40px;
   text-align: center;
-  color: #000000;
-  background-color: #ffffff;
-  box-shadow: 0.1px 7px 15px 0.1px rgba(0, 1, 1, 0.15);
+  color: @black;
+  background-color: @white;
+  box-shadow: 0.1px 7px 15px 0.1px @middle-blue;
 }
 
-.module1__wrap1 {
+.popup--error {
+  top: -10px;
+}
+
+.popup--success {
+  top: 40px;
+}
+
+.popup__wrap {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,7 +37,7 @@
   text-align: center;
 }
 
-.module1__warning {
+.popup__wrap-message {
   display: block;
   margin: 0;
   padding: 0;
@@ -39,16 +47,16 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: black;
 }
 
-.module1__warning-text1 {
+.popup__text-message {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
 
-.module1__content {
+.popup__wrap-content {
   display: block;
   margin: 0;
   padding: 0;
@@ -57,60 +65,43 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #333333;
+  color: @middle-brown;
 }
 
-.module1__content-text1 {
+.popup__text-content {
   display: block;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: @tablet-width) {
-  .module1 {
-    top: -700px;
+  .popup {
     width: 400px;
     padding-top: 55px;
-    box-shadow: 0.2px 7px 15px 0.2px rgba(0, 1, 1, 0.15);
+    box-shadow: 0.2px 7px 15px 0.2px @middle-blue;
   }
 
-  .module1__wrap1 {
-    margin: 0;
-  }
-
-  .module1__warning {
-    display: block;
-    margin: 0;
-    padding: 0;
+  .popup__wrap-message {
     margin-bottom: 25px;
     font-size: 30px;
     line-height: 40px;
   }
 
-  .module1__warning-text1 {
+  .popup__text-message {
     display: block;
   }
 
-  .module1__content {
-    display: block;
+  .popup__wrap-content {
     width: 277px;
     margin: 0;
     padding: 0;
   }
 
-  .module1__content-text1 {
+  .popup__text-content {
     display: inline-block;
-    margin: 0;
-    padding: 0;
   }
 
-  .module1__wrap2 {
+  .popup__wrap-button {
     margin-top: 20px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .module1 {
-    top: -700px;
   }
 }
