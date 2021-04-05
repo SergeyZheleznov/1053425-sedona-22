@@ -1,0 +1,209 @@
+.radio {
+  position: relative;
+  margin-top: 13px;
+  padding: 38px 25px 1px;
+  font-weight: 700;
+  border: none;
+}
+
+.radio--borders::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 272px;
+  left: 1px;
+  z-index: 10;
+
+  width: 320px;
+  height: 1px;
+  background-color: @light-black;
+}
+
+.radio__legend {
+  display: block;
+  width: 236px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+  font-size: @medium-font;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @black;
+}
+
+.radio__label {
+  position: relative;
+  display: block;
+  margin-bottom: 21px;
+  padding-left: 73px;
+  font-size: @medium-font;
+  font-weight: 700px;
+  line-height: 26px;
+  text-align: left;
+  color: @black;
+}
+
+.radio__label--circle::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -5px;
+  display: block;
+  z-index: 10;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: @grey;
+}
+
+.radio__label--circle:hover::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -5px;
+  display: block;
+  z-index: 10;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: @light-white;
+}
+
+.radio__lable--circle:focus::before,
+.radio__label--circle:active::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -5px;
+  display: block;
+  z-index: 10;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: @firm-grey;
+}
+
+/* когда у нашего радио-инпута состояние чект, то есть стоит кружок,
+то у нас должен бы на нём псевдоэлемента афтер*/
+
+.radio__input:checked + .radio__label--circle::after {
+  content: "";
+  position: relative;
+  top: -23px;
+  left: -62px;
+  display: block;
+  z-index: 10;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: @middle-brown;
+}
+
+.radio__input:checked + .radio__label--circle:focus::after,
+.radio__input:checked + .radio__label--circle:active::after {
+  content: "";
+  position: relative;
+  top: -23px;
+  left: -62px;
+  display: block;
+  z-index: 10;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: @middle-brown;
+}
+
+.radio__wrap {
+  display: block;
+  height: 69px;
+}
+
+@media (min-width: @tablet-width) {
+  .radio {
+    order: 1;
+    width: 380px;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .radio__legend {
+    width: 275px;
+    margin: 0;
+    margin-left: 31px;
+    font-size: @large-font;
+    text-align: left;
+  }
+
+  .radio__label {
+    margin: 0;
+    padding-left: 106px;
+  }
+
+  .radio__label--circle::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 33px;
+  }
+
+  .radio__label--circle:hover::before {
+    content: "";
+    left: 33px;
+  }
+
+  .radio__input:checked + .radio__label--circle::after {
+    content: "";
+    position: relative;
+    top: -22px;
+    left: -56px;
+  }
+
+  .radio__input:checked + .radio__label--circle:focus::after,
+  .radio__input:checked + .radio__label--circle:active::after {
+    content: "";
+    left: -56px;
+  }
+
+  .radio__wrap {
+    display: block;
+    margin-top: 34px;
+    margin-left: 1px;
+    height: 44px;
+  }
+
+  .radio--borders::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 381px;
+    z-index: 10;
+
+    width: 1px;
+    height: 292px;
+    background-color: @light-black;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio {
+    width: 592px;
+    margin-top: 25px;
+    padding: 38px 1px 4px 90px;
+  }
+
+  .radio__title {
+    margin-left: 107px;
+  }
+
+  .radio--borders::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 6px;
+    left: 599px;
+  }
+}
