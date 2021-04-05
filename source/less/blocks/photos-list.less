@@ -3,9 +3,19 @@
 }
 
 @media (min-width: @tablet-width) {
-  .photos-list {
+  /*.photos-list {
     display: flex;
     flex-wrap: wrap;
+    width: 648px;
+    margin: 25px auto;
+  }
+*/
+  .photos-list {
+    display: grid;
+
+    grid-template-columns: 324px 324px;
+    grid-template-rows: 483px 347px 347px;
+
     width: 648px;
     margin: 25px auto;
   }
@@ -13,6 +23,12 @@
 
 @media (min-width: @desktop-width) {
   .photos-list {
+    display: grid;
+
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 267px;
+
     width: 1200px;
+    height: 668px;
   }
 }

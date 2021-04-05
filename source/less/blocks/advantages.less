@@ -111,12 +111,9 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 768px;
-    min-height: 310px;
+    display: grid;
+    grid-template-columns: 256px 256px 256px;
+    grid-template-rows: 310px 310px 310px;
     margin: 0;
     padding: 158px 47px 71px;
   }
@@ -210,8 +207,9 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    width: 1200px;
-    height: 330px;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 330px 330px 330px;
     padding-top: 158px;
     padding-left: 73px;
     padding-right: 93px;
