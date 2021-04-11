@@ -6,8 +6,9 @@
   align-items: center;
   justify-content: start;
   width: 320px;
+  height: 287px;
   margin: 0;
-  padding: 28px 20px 48px;
+  padding: 33px 30px 40px 20px;
   text-align: center;
   color: @black;
   background-color: @white;
@@ -20,8 +21,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: start;
+  width: 265px;
+  min-height: 120px;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 7px;
   padding: 0;
   text-align: center;
 }
@@ -29,8 +32,8 @@
 .question__title {
   display: block;
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
-  margin-bottom: 18px;
   font-size: @large-font;
   font-weight: 700;
   line-height: 24px;
@@ -43,28 +46,15 @@
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
   font-size: @little-font;
-  line-height: 26px;
+  line-height: 23px;
   text-align: center;
   text-transform: uppercase;
   color: @middle-brown;
 }
 
-.question__content-text1 {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
 @media (min-width: @tablet-width) {
   .question {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: start;
     width: 768px;
     min-height: 318px;
     margin: 0;
@@ -75,14 +65,15 @@
 
   .question__wrap {
     margin: 0;
+    width: 435px;
+    margin-bottom: -20px;
   }
 
-  .question__text {
-    display: block;
+  .question__title {
     margin: 0;
     padding: 0;
-    margin-bottom: 31px;
-    font-size: 30px;
+    margin-bottom: 19px;
+    font-size: @big-font;
   }
 
   .question__content {
@@ -90,25 +81,7 @@
     width: 440px;
     margin: 0;
     padding: 0;
-  }
-
-  .question__content-text1 {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-
-  .question__search {
-    width: 458px;
-    height: 58px;
-    margin: 0;
-    padding: 0;
-    font-size: @large-font;
-  }
-
-  .question__search a {
-    margin: 0;
-    padding: 0;
+    line-height: 26px;
   }
 }
 
@@ -126,6 +99,7 @@
 
   .question__wrap {
     margin: 0;
+    margin-bottom: -20px;
   }
 
   .question__text {

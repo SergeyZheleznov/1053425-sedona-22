@@ -1,6 +1,7 @@
 .form-head {
   position: relative;
   width: 320px;
+  min-height: 361px;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid @little-black;
@@ -18,7 +19,6 @@
   content: "";
   position: absolute;
   top: 133px;
-  left: 0.1px;
   width: 320px;
   height: 26px;
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
 }
 
 .form-head__text {
@@ -42,7 +42,7 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
-  color: #333333;
+  color: @middle-brown;
 }
 
 @media (min-width: @tablet-width) {
@@ -72,7 +72,7 @@
 
   .form-head__title {
     font-size: 30px;
-    margin: 74px auto 31px;
+    margin: 63px auto 31px;
   }
 
   .form-head__text br {
@@ -89,6 +89,7 @@
 @media (min-width: @desktop-width) {
   .form-head {
     width: 1200px;
+    min-height: 540px;
   }
 
   .form-head__picture {
@@ -113,5 +114,10 @@
   .form-head__title {
     font-size: 30px;
     margin: 112px auto 31px;
+  }
+
+  .form-head__text {
+    width: 440px;
+    margin: 35px auto 5px;
   }
 }
