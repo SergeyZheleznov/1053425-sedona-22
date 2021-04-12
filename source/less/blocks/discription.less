@@ -1,10 +1,12 @@
 .discription {
-  margin-top: 5px;
+  height: 272px;
+  padding: 1px 11px 21px;
   font-weight: 700;
   border: none;
 }
 
 .discription__legend {
+  padding-top: 20px;
   font-size: @medium-font;
   font-weight: 700;
   line-height: 26px;
@@ -39,7 +41,7 @@
 .discription__label--quadrate::before {
   content: "";
   position: absolute;
-  top: -115px;
+  top: -110px;
   left: -20px;
   display: block;
   z-index: 5;
@@ -54,10 +56,12 @@
     order: 5;
     width: 764px;
     padding: 42px 55px 20px 52px;
+    border: none;
   }
 
   .discription__legend {
     width: 255px;
+    padding-top: 2px;
     font-size: @large-font;
     text-align: center;
   }
@@ -66,22 +70,22 @@
     content: "";
     position: absolute;
     display: block;
-    top: 13px;
+    top: -16px;
     left: 60px;
-    width: 125px;
+    width: 120px;
     height: 1px;
-    background-color: @light-black;
+    background-color: @white-grey;
   }
 
   .discription--borders::after {
     content: "";
     position: absolute;
     display: block;
-    top: 13px;
+    top: -16px;
     left: 581px;
-    width: 125px;
+    width: 120px;
     height: 1px;
-    background-color: @light-black;
+    background-color: @white-grey;
   }
 
   .discription__wrap {
@@ -130,9 +134,8 @@
 @media (min-width: @desktop-width) {
   .discription {
     position: relative;
-    width: 1196px;
-    margin-top: 0;
-    padding: 45px 55px 20px 112px;
+    width: 1199px;
+    padding: 45px 55px 20px 55px;
   }
 
   .discription__legend {
@@ -142,13 +145,13 @@
   }
 
   .discription--borders::before {
-    top: 12px;
+    top: -17px;
     left: 120px;
     width: 274px;
   }
 
   .discription--borders::after {
-    top: 12px;
+    top: -17px;
     left: 800px;
     width: 274px;
   }
@@ -158,9 +161,9 @@
   }
 
   .discription__label--quadrate::after {
-    content: "* - обязательные поля";
+    content: "* — обязательные поля";
     top: 85px;
-    left: 783px;
+    left: 781px;
   }
 
   .discription__textarea {
@@ -170,5 +173,7 @@
 
   .discription__wrap {
     width: 900px;
+    padding-left: 82px;
+    padding-top: 26px;
   }
 }
