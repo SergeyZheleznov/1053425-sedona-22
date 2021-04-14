@@ -89,7 +89,20 @@
   background-color: @middle-brown;
 }
 
-.radio__input:checked + .radio__label--circle:focus::after,
+.radio__input:checked + .radio__label--circle:hover::after,
+.radio__input:checked + .radio__label--circle:focus::after {
+  content: "";
+  position: relative;
+  top: -22px;
+  left: -62px;
+  display: block;
+  z-index: 10;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: @middle-brown;
+}
+
 .radio__input:checked + .radio__label--circle:active::after {
   content: "";
   position: relative;
@@ -101,6 +114,7 @@
   height: 21px;
   border-radius: 50%;
   background-color: @middle-brown;
+  opacity: 0.3;
 }
 
 .radio__wrap {
@@ -151,7 +165,13 @@
     left: -57px;
   }
 
-  .radio__input:checked + .radio__label--circle:focus::after,
+  .radio__input:checked + .radio__label--circle:hover::after,
+  .radio__input:checked + .radio__label--circle:focus::after {
+    content: "";
+    top: -22px;
+    left: -56px;
+  }
+
   .radio__input:checked + .radio__label--circle:active::after {
     content: "";
     top: -22px;
