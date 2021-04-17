@@ -27,7 +27,59 @@
 
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("../img/icon-menu.svg");
-
   border: none;
+}
+
+.page-header__button--burger {
+  background-image: url("../img/icon-menu.svg");
+  border: none;
+}
+
+.page-header__button--cross {
+  background-image: url("../img/icon-cross.svg");
+  border: none;
+}
+
+.page-header__button--burger:hover {
+  opacity: 0.6;
+}
+
+.page-header__button--burger:active {
+  opacity: 0.3;
+}
+
+.page-header__button--cross:hover {
+  opacity: 0.6;
+  border: none;
+}
+
+.page-header__button--cross:active {
+  opacity: 0.3;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrap {
+    height: 0.1px;
+  }
+
+  .page-header__logo {
+    top: -56px;
+    left: 334px;
+  }
+
+  .page-header__button {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo {
+    top: -58px;
+    left: 508px;
+  }
+
+  .page-header__button {
+    display: none;
+  }
 }
