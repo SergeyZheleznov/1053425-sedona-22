@@ -1,0 +1,29 @@
+.logo__tablet {
+  display: none;
+}
+
+.logo__desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .logo__mobile {
+    display: none;
+  }
+
+  .logo__tablet {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__tablet {
+    display: none;
+  }
+
+  .logo__desktop {
+    display: block;
+    width: 127px;
+    height: 47px;
+  }
+}
