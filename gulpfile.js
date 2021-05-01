@@ -5,6 +5,15 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const delite = require("del");
+const htmlmin = require("gulp-htmlmin");
 
 // Styles
 
@@ -16,19 +25,107 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+//images
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  .pipe (imagemin([
+    imagemin.optipng({optimizationLevel: 1}),
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest("build/img"));
+}
+
+exports.images = images;
+
+//web
+
+const web = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality:90}))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.web = web;
+
+//sprite
+
+const sprite = () => {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore( ))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.sprite = sprite;
+
+//clean
+
+const clean = () => {
+  return delite("build");
+}
+
+exports.clean = clean;
+
+//html
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(posthtml ([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
+
+//copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ],{base: "source"
+  })
+  .pipe(gulp.dest("build"));
+}
+
+exports.copy = copy;
+
+//minify
+
+const minify = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin())
+    .pipe(gulp.dest("build"));
+}
+
+exports.minify = minify;
+
+//build
+
+const build = gulp.series(clean, copy, styles, sprite, html, minify);
+
+exports.build = build;
 
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -38,6 +135,7 @@ const server = (done) => {
 }
 
 exports.server = server;
+
 
 // Watcher
 
@@ -49,3 +147,9 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
+//start
+
+const start = gulp.series(build, server, watcher);
+
+exports.start = start;
