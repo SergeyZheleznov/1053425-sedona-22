@@ -20,7 +20,9 @@
   padding: 28px 15px 20px 25px;
 }
 
-.discription__textarea::placeholder {
+.discription__textarea {
+  width: 250px;
+  border: none;
   font-size: @medium-font;
   font-weight: 700;
   line-height: 26px;
@@ -29,9 +31,13 @@
   color: @black;
 }
 
-.discription__textarea {
-  width: 250px;
-  border: none;
+.discription__textarea::placeholder {
+  font-size: @medium-font;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  text-transform: none;
+  color: @black;
 }
 
 .discription__label {
@@ -47,19 +53,13 @@
 .discription__label--quadrate::before {
   content: "";
   position: absolute;
-  top: -110px;
+  top: -150px;
   left: -20px;
   display: block;
   z-index: 5;
   width: 279px;
   height: 160px;
   background-color: @more-little-black;
-  font-size: @medium-font;
-  font-weight: 700;
-  line-height: 26px;
-  text-align: left;
-  text-transform: none;
-  color: @black;
 }
 
 @media (min-width: @tablet-width) {
