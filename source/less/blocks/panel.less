@@ -92,29 +92,33 @@
   border: none;
 }
 
-.panel__replay path,
-.panel__subtitles path,
+.panel__replay svg,
+.panel__subtitles svg,
 .panel__fullscreen svg {
   fill: @grey-blue;
 }
 
-.panel__replay:hover path,
-.panel__subtitles:hover path,
+.panel__replay:hover svg,
+.panel__subtitles:hover svg,
 .panel__fullscreen:hover svg {
   fill: @middle-brown;
 }
 
-.panel__replay:active path,
-.panel__subtitles:active path,
+.panel__replay:active svg,
+.panel__subtitles:active svg,
 .panel__fullscreen:active svg,
-.panel__replay:focus path,
-.panel__subtitles:focus path,
+.panel__replay:focus svg,
+.panel__subtitles:focus svg,
 .panel__fullscreen:focus svg {
   fill: @middle-brown;
   opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
+  .panel {
+    top: -95px;
+  }
+
   .panel__control {
     width: 389px;
     height: 93px;
@@ -160,7 +164,7 @@
   }
 
   .panel__subtitles {
-    margin-left: 29px;
+    margin-left: 32px;
     margin-top: 35px;
     background-color: @super-little-brown;
     border: none;
@@ -173,29 +177,25 @@
     border: none;
   }
 
-  .panel__replay path,
-  .panel__subtitles path,
+  .panel__replay svg,
+  .panel__subtitles svg,
   .panel__fullscreen svg {
     fill: @more-little-brown;
   }
 
-  .panel__replay:hover path,
-  .panel__subtitles:hover path,
+  .panel__replay:hover svg,
+  .panel__subtitles:hover svg,
   .panel__fullscreen:hover svg {
     fill: @near-little-brown;
   }
 
-  .panel__replay:active path,
-  .panel__subtitles:active path,
+  .panel__replay:active svg,
+  .panel__subtitles:active svg,
   .panel__fullscreen:active svg,
-  .panel__replay:focus path,
-  .panel__subtitles:focus path,
+  .panel__replay:focus svg,
+  .panel__subtitles:focus svg,
   .panel__fullscreen:focus svg {
     fill: @less-little-brown;
-  }
-
-  .panel {
-    top: -97px;
   }
 
   .panel__part1 {

@@ -1,12 +1,14 @@
 .contacts {
   position: relative;
-  min-height: 287px;
-  padding: 20px 18px 28px;
+  min-height: 286px;
+  padding: 20px 18px 23px;
   border: none;
   border-bottom: 1px solid @little-black;
 }
 
 .contacts__legend {
+  width: 290px;
+  padding-right: 10px;
   padding-top: 20px;
   font-size: @medium-font;
   font-weight: 700;
@@ -58,10 +60,27 @@
   background-color: @grey;
 }
 
+.contacts__input:-moz-placeholder {
+  color: @black;
+}
+
+.contacts__input::-moz-placeholder {
+  color: @black;
+  opacity: 1;
+}
+
+.contacts__input:-ms-input-placeholder {
+  color: @black;
+}
+
+.contacts__input::-webkit-input-placeholder {
+  color: @black;
+}
+
 .contacts__input::placeholder {
   font-size: 18px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 51px;
   text-align: left;
   color: @black;
 }
@@ -143,7 +162,7 @@
     flex-wrap: wrap;
     width: 768px;
     min-height: 310px;
-    padding: 16px 20px 1px 59px;
+    padding: 16px 1px 1px 59px;
     border: none;
   }
 
@@ -153,9 +172,9 @@
 
   .contacts__legend {
     width: 380px;
-    margin: 0;
+    margin: auto;
     padding-top: 30px;
-    padding-right: 40px;
+    padding-right: 60px;
     font-size: @large-font;
     text-align: center;
   }

@@ -20,6 +20,7 @@
   margin-right: auto;
   margin-bottom: 51px;
   padding: 0;
+  line-height: 63px;
 }
 
 .button--popup {
@@ -31,9 +32,15 @@
   background-color: @dark-blue;
 }
 
-.button:focus {
+.button:focus,
+.button:active {
   background-color: @very-dark-blue;
   color: @less-little-brown;
+}
+
+.button:disabled {
+  background-color: @light-white;
+  color: @white;
 }
 
 @media (min-width: @tablet-width) {

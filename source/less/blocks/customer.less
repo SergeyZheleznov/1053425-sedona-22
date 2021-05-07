@@ -8,8 +8,10 @@
 
 .customer__legend {
   display: block;
+  width: 290px;
   margin: 0;
   padding: 0;
+  padding-right: 10px;
   padding-top: 20px;
   font-size: @medium-font;
   font-weight: 700;
@@ -32,7 +34,6 @@
   margin: 0;
   margin-right: 10px;
   padding: 0;
-
   font-size: @little-font;
   font-weight: 400;
   line-height: 26px;
@@ -56,16 +57,34 @@
   border: none;
 }
 
+.customer__input:-moz-placeholder {
+  color: @black;
+}
+
+.customer__input::-moz-placeholder {
+  color: @black;
+  opacity: 1;
+}
+
+.customer__input:-ms-input-placeholder {
+  color: @black;
+}
+
+.customer__input::-webkit-input-placeholder {
+  color: @black;
+}
+
 .customer__input::placeholder {
   font-size: 18px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 51px;
   text-align: left;
   color: @black;
 }
 
 .customer__input:hover {
   background-color: @light-white;
+  color: @black;
 }
 
 .customer__input:active,
@@ -92,17 +111,17 @@
 @media (min-width: @tablet-width) {
   .customer {
     order: 2;
-    width: 379px;
+    width: 330px;
     height: 370px;
     margin: 0;
-    padding: 11px 10px 1px 24px;
+    padding: 11px 1px 1px 24px;
     border: none;
   }
 
   .customer__legend {
     width: 275px;
-    margin: 0;
-    padding: 34px 10px 10px 39px;
+    margin: auto;
+    padding: 34px 10px 10px 22px;
     font-size: @large-font;
     text-align: left;
   }
@@ -131,8 +150,10 @@
   }
 
   .customer__legend {
-    margin-left: 1px;
+    width: 300px;
+    margin-left: -3px;
     padding-top: 38px;
+    padding-left: 41px;
   }
 
   .customer__wrap {

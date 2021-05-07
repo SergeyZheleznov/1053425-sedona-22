@@ -1,6 +1,6 @@
 .radio {
   position: relative;
-  padding: 38px 25px 1px;
+  padding: 36px 24px 1px 24px;
   font-weight: 700;
   height: 290px;
   border: none;
@@ -12,7 +12,8 @@
   width: 236px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-left: 2px;
+  padding-top: 22px;
   font-size: @medium-font;
   font-weight: 700;
   line-height: 26px;
@@ -36,7 +37,7 @@
 .radio__label--circle::before {
   content: "";
   position: absolute;
-  top: -12px;
+  top: -15px;
   left: -5px;
   display: block;
   z-index: 10;
@@ -49,7 +50,7 @@
 .radio__label--circle:hover::before {
   content: "";
   position: absolute;
-  top: -12px;
+  top: -15px;
   left: -5px;
   display: block;
   z-index: 10;
@@ -63,7 +64,7 @@
 .radio__label--circle:active::before {
   content: "";
   position: absolute;
-  top: -12px;
+  top: -15px;
   left: -5px;
   display: block;
   z-index: 10;
@@ -79,7 +80,7 @@
 .radio__input:checked + .radio__label--circle::after {
   content: "";
   position: relative;
-  top: -22px;
+  top: -25px;
   left: -62px;
   display: block;
   z-index: 10;
@@ -93,7 +94,7 @@
 .radio__input:checked + .radio__label--circle:focus::after {
   content: "";
   position: relative;
-  top: -22px;
+  top: -25px;
   left: -62px;
   display: block;
   z-index: 10;
@@ -106,7 +107,7 @@
 .radio__input:checked + .radio__label--circle:active::after {
   content: "";
   position: relative;
-  top: -22px;
+  top: -25px;
   left: -62px;
   display: block;
   z-index: 10;
