@@ -17,19 +17,22 @@
 }
 
 .discription__wrap {
-  width: 250px;
-  padding: 26px 15px 20px 25px;
+  width: 270px;
+  height: 165px;
+  padding: 13px 15px 20px 5px;
 }
 
 .discription__textarea {
-  width: 250px;
-  border: none;
+  width: 280px;
+  height: 165px;
   font-size: @medium-font;
   font-weight: 700;
   line-height: 26px;
   text-align: left;
   text-transform: none;
   color: @black;
+  background-color: @white;
+  border: none;
 }
 
 .discription__textarea:-moz-placeholder {
@@ -50,34 +53,26 @@
 }
 
 .discription__textarea::placeholder {
+  height: 136px;
+  padding: 12px 20px 12px 20px;
   font-size: @medium-font;
   font-weight: 700;
   line-height: 26px;
   text-align: left;
-  text-transform: none;
   color: @black;
+  background-color: @grey;
 }
 
-.discription__label {
-  position: relative;
-  font-size: @medium-font;
-  font-weight: 700;
-  line-height: 26px;
-  text-align: left;
-  text-transform: none;
-  color: @black;
+.discription__textarea:hover::placeholder {
+  background-color: @light-white;
 }
 
-.discription__label--quadrate::before {
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: -20px;
-  display: block;
-  z-index: 5;
-  width: 279px;
-  height: 160px;
-  background-color: @more-little-black;
+.discription__textarea:active::placeholder,
+.discription__textarea:focus::placeholder {
+  background-color: @white;
+  outline: 4px solid @light-white;
+  outline-offset: -4px;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -85,7 +80,7 @@
     position: relative;
     order: 5;
     width: 764px;
-    padding: 42px 1px 20px 52px;
+    padding: 42px 1px 15px 52px;
     border: none;
   }
 
@@ -122,8 +117,10 @@
 
   .discription__wrap {
     position: relative;
-    width: 350px;
-    padding: 30px 15px 20px 25px;
+    width: 630px;
+    height: 165px;
+    margin-top: 4px;
+    padding: 5px 15px 20px 5px;
     font-size: @medium-font;
     font-weight: 700;
     line-height: 35px;
@@ -132,22 +129,11 @@
     color: @black;
   }
 
-  .discription__label {
-    position: relative;
-    width: 500px;
-    color: @black;
-  }
-
-  .discription__label--quadrate::before {
-    top: -145px;
-    width: 648px;
-  }
-
   .discription__label--quadrate::after {
     content: "* — обязательные поля";
     position: absolute;
-    top: 88px;
-    left: 470px;
+    top: 240px;
+    left: 493px;
     display: block;
     z-index: 5;
     width: 170px;
@@ -159,8 +145,14 @@
   }
 
   .discription__textarea {
-    width: 606px;
-    height: 120px;
+    width: 649px;
+    height: 171px;
+    background-color: @white;
+  }
+
+  .discription__textarea::placeholder {
+    height: 131px;
+    padding: 18px 20px 12px 20px;
   }
 }
 
@@ -190,24 +182,24 @@
     width: 274px;
   }
 
-  .discription__label--quadrate::before {
-    width: 960px;
-  }
-
   .discription__label--quadrate::after {
     content: "* — обязательные поля";
-    top: 90px;
-    left: 781px;
-  }
-
-  .discription__textarea {
-    width: 906px;
-    height: 120px;
+    top: 238px;
+    left: 861px;
   }
 
   .discription__wrap {
-    width: 900px;
-    padding-left: 82px;
-    padding-top: 26px;
+    width: 1050px;
+    padding-left: 60px;
+  }
+
+  .discription__textarea {
+    width: 979px;
+    height: 160px;
+  }
+
+  .discription__textarea::placeholder {
+    height: 125px;
+    padding: 18px 20px 12px 20px;
   }
 }
